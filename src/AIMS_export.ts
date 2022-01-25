@@ -193,12 +193,50 @@ export class AIMS {
    * holds all formulas for Coordinate Geometry
    */
   static Coordinate = {
+
+    /**
+     * the Distance between two points
+     * @param {number} A Given: Points of A (x1, y1)
+     * @param {number} B Given: Points of b (x2, y2)
+     * @returns the Distance between the two points
+     */
+    Distance(A:[number,number],B:[number,number]){
+      const [x1,y1] = A
+      const [x2,y2] = B
+
+      return (Math.sqrt((x1-x2)**2+(y1-y2)**2))
+    },
+ /**
+     *the Midpoint between two points
+     * @param {number} A Given: Points of A (x1, y1)
+     * @param {number} B Given: Points of b (x2, y2)
+     * @returns {string} the Midpoint between the two points
+     */
+    Midpoint(A:[number,number],B:[number,number]){
+      const [x1,y1] = A
+      const [x2,y2] = B
+      
+      return(`${(x2+x1)/2},${(y2+y1)/2}`)
+    },
+ /**
+     *the Slope of line through two points
+     * @param {number} A Given: Points of A (x1, y1)
+     * @param {number} B Given: Points of b (x2, y2)
+     * @returns {string} the Slope of line through the two points
+     */
+    Slope_through(A:[number,number],B:[number,number]){
+      const [x1,y1] = A
+      const [x2,y2] = B
+      
+      return(`${y2-y1}/${x2-x1}`)
+    }
+  }
 /**
  * holds formulas for Quadratic Formula
  */
-  }
   static Quadratic = {
 
+    Quadratic(){}
   }
 
 }
